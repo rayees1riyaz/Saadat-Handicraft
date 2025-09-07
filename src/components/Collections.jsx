@@ -10,7 +10,7 @@ const Collections = () => {
   ];
 
   const womenItems = [
-    { name: "Aari Work Embroidery Pheren", img: "./images/aari work2.jpg", hoverImg: "./images/aari work.jpg" },
+    { name: "Aari Work Embroidery Pheren", img: "./images/gallery/gallery38.jpg", hoverImg: "./images/aari work.jpg" },
     { name: "Kani Weave Shawl", img: "./images/Kani Weave Shawl.jpg", hoverImg: "./images/Kani Weave Shawl2.jpg" },
     { name: "Kani Weave Stole & Scarf", img: "./images/Kani Weave Stole & Scarf.jpg", hoverImg: "./images/Kani Weave Stole & Scarf2.jpg" },
     { name: "Sozni Embroidery Shawl & Stole", img: "./images/Sozni Embroidery Shawl & Stole.jpg", hoverImg: "./images/Sozni Embroidery Shawl & Stole2.jpg" },
