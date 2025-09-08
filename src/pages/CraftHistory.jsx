@@ -22,31 +22,24 @@ const CraftHistory = () => {
     {
       title: "THE KASHMIRI LEGACY: SOZNI KAARI",
       img: "/images/sozni-kaari.jpg",
-      desc: `Sozni Kaari is one of the most exquisite forms of Kashmiri embroidery. It originated in the royal courts of Kashmir during the 15th century, known for its intricate, fine needlework done with silk threads on luxurious woolen shawls. 
-      The designs often include elaborate floral motifs, paisleys, and vine patterns, reflecting Persian influences blended with local artistry. Traditionally, Sozni embroidery was a mark of high social status and wealth, often adorning shawls, garments, and ceremonial attire. Artisans, mostly women, would spend months creating a single piece, making each work unique. Even today, Sozni Kaari is revered for its finesse, symbolizing the timeless craftsmanship and cultural richness of Kashmir.`
+      desc: `Sozni Kaari is one of the most exquisite forms of Kashmiri embroidery. It originated in the royal courts of Kashmir during the 15th century, known for its intricate, fine needlework done with silk threads on luxurious woolen shawls. The designs often include elaborate floral motifs, paisleys, and vine patterns, reflecting Persian influences blended with local artistry. Traditionally, Sozni embroidery was a mark of high social status and wealth, often adorning shawls, garments, and ceremonial attire. Artisans, mostly women, would spend months creating a single piece, making each work unique. Even today, Sozni Kaari is revered for its finesse, symbolizing the timeless craftsmanship and cultural richness of Kashmir.`
     },
-   
-
     {
       title: "KANI SHAWL OF KASHMIR",
       img: "/images/kani-shawl.jpg",
-      desc: `The Kani Shawl is perhaps the most iconic handwoven product of Kashmir, known worldwide for its intricate patterns and unparalleled craftsmanship. The term 'Kani' refers to the small wooden sticks used instead of a shuttle in traditional weaving. 
-      Each pattern is meticulously created by hand, with artisans often memorizing complex designs passed down through generations. The weaving process is extremely time-consuming; a single shawl can take several months to complete, depending on the complexity of the design. 
-      Kani Shawls gained immense popularity during the 18th and 19th centuries, becoming prized possessions among European royalty and nobility. They remain a symbol of luxury, artistry, and the rich cultural legacy of Kashmir. Owning a Kani Shawl is not just about fashion—it is about cherishing a centuries-old tradition of skill, patience, and heritage.`
+      desc: `The Kani Shawl is perhaps the most iconic handwoven product of Kashmir, known worldwide for its intricate patterns and unparalleled craftsmanship. The term 'Kani' refers to the small wooden sticks used instead of a shuttle in traditional weaving. Each pattern is meticulously created by hand, with artisans often memorizing complex designs passed down through generations. The weaving process is extremely time-consuming; a single shawl can take several months to complete, depending on the complexity of the design. Kani Shawls gained immense popularity during the 18th and 19th centuries, becoming prized possessions among European royalty and nobility. They remain a symbol of luxury, artistry, and the rich cultural legacy of Kashmir. Owning a Kani Shawl is not just about fashion—it is about cherishing a centuries-old tradition of skill, patience, and heritage.`
     },
-     {
-  title: "TRADITIONAL KASHMIRI CRAFTS",
-  img: "/images/traditional-crafts.jpg",
-  desc: `Kashmir has a rich heritage of traditional crafts that have been preserved over centuries. From the exquisite Kani and Jamawar weaving techniques to the delicate embroidery styles like Aari and Sozni, each craft reflects the region's artistry and cultural identity. 
-  Historically, these crafts were patronized by kings and nobles, serving both functional and decorative purposes in households and royal courts. Handwoven shawls, carpets, and embroidered garments were not only symbols of wealth and status but also testaments to Kashmiri craftsmanship. 
-  Today, these traditional crafts continue to thrive, representing the cultural legacy of Kashmir and the skill, patience, and creativity of its artisans.`
-}
+    {
+      title: "TRADITIONAL KASHMIRI CRAFTS",
+      img: "/images/traditional-crafts.jpg",
+      desc: `Kashmir has a rich heritage of traditional crafts that have been preserved over centuries. From the exquisite Kani and Jamawar weaving techniques to the delicate embroidery styles like Aari and Sozni, each craft reflects the region's artistry and cultural identity. Historically, these crafts were patronized by kings and nobles, serving both functional and decorative purposes in households and royal courts. Handwoven shawls, carpets, and embroidered garments were not only symbols of wealth and status but also testaments to Kashmiri craftsmanship. Today, these traditional crafts continue to thrive, representing the cultural legacy of Kashmir and the skill, patience, and creativity of its artisans.`
+    }
   ];
 
   return (
     <>
       <Navbar />
-<section className="breadcrumb-section" data-aos="fade-down">
+      <section className="breadcrumb-section" data-aos="fade-down">
         <div
           style={{
             width: "90%",
@@ -58,12 +51,23 @@ const CraftHistory = () => {
         >
           <h6 style={{ margin: 0, fontSize: "1.3rem" }}>CraftHistory</h6>
           <div style={{ fontSize: "0.9rem", paddingTop: "10px" }}>
-            <a href="/" style={{ color: "#fff", textDecoration: "none", marginRight: "10px" }}>Home</a>
+            <a
+              href="/"
+              style={{ color: "#fff", textDecoration: "none", marginRight: "10px" }}
+            >
+              Home
+            </a>
             /
-            <a href="/history" style={{ color: "#fff", textDecoration: "none", marginLeft: "10px" }}>CraftHistory</a>
+            <a
+              href="/history"
+              style={{ color: "#fff", textDecoration: "none", marginLeft: "10px" }}
+            >
+              CraftHistory
+            </a>
           </div>
         </div>
       </section>
+
       {/* Craft Sections */}
       <div className="craft-section-container">
         {craftSections.map((section, index) => (
@@ -78,7 +82,8 @@ const CraftHistory = () => {
             </div>
             <div className="craft-content">
               <h3>{section.title}</h3>
-              <p>{section.desc}</p>
+              {/* ✅ clean up extra spaces/newlines */}
+              <p>{section.desc.replace(/\s+/g, " ").trim()}</p>
             </div>
           </div>
         ))}
@@ -91,7 +96,7 @@ const CraftHistory = () => {
         /* Craft Sections */
         .craft-section-container {
           max-width: 1150px;
-          margin: 180px auto 100px auto; /* Desktop spacing */
+          margin: 180px auto 100px auto;
           padding: 0 20px;
           display: flex;
           flex-direction: column;
@@ -135,30 +140,38 @@ const CraftHistory = () => {
           font-size: 1.1rem;
           line-height: 1.8;
           text-align: justify;
+          white-space: normal;
+          word-break: break-word;
         }
 
         /* Mobile adjustments */
         @media (max-width: 768px) {
           .craft-section-container {
-            margin-top: 40px; /* 100px space on mobile */
+            margin-top: 40px;
           }
           .craft-img img {
             height: 220px;
           }
-        }
-          .breadcrumb-section {
-            display: none;
-            width: 100%;
-            background-color: #111;
-            color: #fff;
-            padding: 15px 20px;
-            margin-top: 100px;
+          .craft-content p {
+            font-size: 1rem;
+            line-height: 1.6;
           }
+        }
 
-          @media (max-width: 768px) {
-            .breadcrumb-section {
-              display: block;
-            }
+        .breadcrumb-section {
+          display: none;
+          width: 100%;
+          background-color: #111;
+          color: #fff;
+          padding: 15px 20px;
+          margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+          .breadcrumb-section {
+            display: block;
+          }
+        }
         `}
       </style>
     </>

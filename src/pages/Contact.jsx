@@ -13,6 +13,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [successMsg, setSuccessMsg] = useState("");
+
   useEffect(() => {
     AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
   }, []);
@@ -24,8 +26,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for contacting us!");
+    setSuccessMsg("✅ Thank you for contacting us! We’ll get back to you soon.");
     setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+
+    // hide message after 5 seconds
+    setTimeout(() => setSuccessMsg(""), 5000);
   };
 
   const contactCards = [
@@ -119,14 +124,6 @@ const Contact = () => {
                 transition: "all 0.3s ease-in-out",
                 cursor: "pointer",
               }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = "translateY(-6px)";
-                e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.12)";
-              }}
             >
               {item.icon}
               <h3 style={{ margin: "12px 0", color: "#1e3a8a" }}>{item.title}</h3>
@@ -168,7 +165,6 @@ const Contact = () => {
                   fontSize: "16px",
                   width: "100%",
                   boxSizing: "border-box",
-                  transition: "all 0.3s ease-in-out",
                 }}
               />
             ))}
@@ -186,7 +182,6 @@ const Contact = () => {
                 fontSize: "16px",
                 width: "100%",
                 boxSizing: "border-box",
-                transition: "all 0.3s ease-in-out",
               }}
             />
             <button
@@ -203,18 +198,25 @@ const Contact = () => {
                 boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
                 transition: "all 0.3s ease-in-out",
               }}
-              onMouseOver={(e) => {
-                e.target.style.transform = "scale(1.05)";
-                e.target.style.boxShadow = "0 8px 20px rgba(0,0,0,0.25)";
-              }}
-              onMouseOut={(e) => {
-                e.target.style.transform = "scale(1)";
-                e.target.style.boxShadow = "0 6px 15px rgba(0,0,0,0.2)";
-              }}
             >
               Send Message
             </button>
           </form>
+
+          {/* ✅ Success message */}
+          {successMsg && (
+            <p
+              style={{
+                marginTop: "20px",
+                textAlign: "center",
+                color: "green",
+                fontWeight: "600",
+                fontSize: "16px",
+              }}
+            >
+              {successMsg}
+            </p>
+          )}
         </section>
       </div>
 
