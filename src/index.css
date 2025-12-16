@@ -1,4 +1,4 @@
-/* Global Reset & Box Sizing */
+
 *,
 *::before,
 *::after {
@@ -19,19 +19,19 @@ html, body {
   padding: 0;
 }
 
-/* Links */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images */
+
 img {
   display: block;
   max-width: 100%;
 }
 
-/* Header */
+
 header {
   position: fixed;
   top: 0;
@@ -52,11 +52,11 @@ header {
   display: flex;
   gap: 32px;
   font-weight: 500;
-  /* padding: 70px; */
+
 }
 
 .nav-links a:hover {
-  color: #FFD700; /* light golden on hover */
+  color: #FFD700; 
 }
 
 .nav-right {
@@ -76,7 +76,7 @@ header {
   cursor: pointer;
 }
 
-/* Mobile menu top: logo left, close button right */
+
 .mobile-menu-top {
   display: flex;
   justify-content: space-between;
@@ -87,16 +87,15 @@ header {
 }
 
 .mobile-menu-logo-left {
-  height: 56px; /* slightly bigger logo */
+  height: 56px;
   object-fit: contain;
 }
 
-/* Close icon */
 .mobile-menu-close {
   cursor: pointer;
 }
 
-/* Links inside mobile menu */
+
 .mobile-links {
   display: flex;
   flex-direction: column;
@@ -117,12 +116,12 @@ header {
   color: #facc15;
 }
 
-/* Link icon on left */
+
 .link-icon {
   color: #facc15;
 }
 
-/* Overlay */
+
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
@@ -138,7 +137,7 @@ header {
   visibility: visible;
 }
 
-/* Mobile menu container */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -159,7 +158,7 @@ header {
   left: 0;
 }
 
-/* Hide desktop links and title on mobile and tablet */
+
 @media (max-width: 1024px) {
   .nav-links,
   .desktop-only {
@@ -172,13 +171,12 @@ header {
 }
 
 
-/* Main container for 70% width content
+
 .main-container {
   width: 70%;
   margin: 0 auto;
 } */
 
-/* Hero / Slider */
 .hero-slide {
   position: relative;
   width: 100%;
@@ -205,7 +203,7 @@ header {
   z-index: 1;
 }
 
-/* Sections */
+
 .section {
   padding: 64px 0;
   text-align: center;
@@ -216,7 +214,7 @@ header {
   margin-bottom: 40px;
 }
 
-/* Grid */
+
 .grid {
   display: grid;
   gap: 24px;
@@ -232,7 +230,7 @@ header {
   }
 }
 
-/* Cards */
+
 .card {
   position: relative;
   overflow: hidden;
@@ -266,7 +264,6 @@ header {
   padding: 0 10px;
 }
 
-/* Featured Products */
 .featured-product img {
   height: 450px;
   object-fit: cover;
@@ -279,7 +276,7 @@ header {
   color: #333;
 }
 
-/* Video Section */
+
 .video-section {
   position: relative;
   height: 60vh;
@@ -320,18 +317,18 @@ header {
     background-position: 200% 0;
   }
 }
-/* Footer */
+
 footer {
-  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Elegant dark gradient */
+  background: linear-gradient(135deg, #1a1a2e, #16213e); 
   color: #f1f1f1;
-  padding: 40px 24px; /* reduced padding */
+  padding: 40px 24px; 
   text-align: center;
 }
 
 footer .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 100px; /* smaller gap */
+  gap: 100px; 
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -339,7 +336,7 @@ footer .grid {
 @media (min-width: 768px) {
   footer .grid {
     grid-template-columns: repeat(3, 1fr);
-    text-align: left; /* better professional alignment */
+    text-align: left;
   }
 }
 
@@ -347,13 +344,13 @@ footer h3 {
   font-weight: 600;
   margin-bottom: 12px;
   font-size: 1.1rem;
-  color: #facc15; /* golden highlight */
+  color: #facc15; 
 }
 
 footer p {
   margin: 4px 0;
   line-height: 1.5;
-  font-size: 1rem; /* slightly bigger */
+  font-size: 1rem; 
 }
 
 footer a {
@@ -368,7 +365,7 @@ footer a:hover {
 footer img {
   display: block;
   margin: 0 auto 12px auto;
-  height: 90px; /* smaller logo */
+  height: 90px; 
   border-radius: 10px;
 }
 
@@ -382,7 +379,7 @@ footer .text-center {
 }
 
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .hero-slide {
     height: 60vh;
@@ -442,7 +439,6 @@ footer .text-center {
   }
 }
 
-/* Mobile only (optional adjustments) */
 @media (max-width: 768px) {
   .hero-slide {
     height: 50vh;
