@@ -1,4 +1,4 @@
-// src/pages/Gallery.jsx
+
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -13,8 +13,7 @@ const Gallery = () => {
       easing: "ease-in-out",
     });
   }, []);
-
-  // 48 images with zig-zag margins
+s
   const images = [
     { src: "/images/gallery/gallery1.jpg", marginTop: "20px", marginBottom: "0px" },
     { src: "/images/gallery/gallery2.jpg", marginTop: "0px", marginBottom: "20px" },
@@ -70,7 +69,6 @@ const Gallery = () => {
     <div style={{ fontFamily: "Georgia, serif", color: "#333" }}>
       <Navbar />
 
-      {/* Breadcrumb - mobile only with animation */}
       <section className="breadcrumb-section" data-aos="fade-down">
         <div
           style={{
@@ -94,7 +92,6 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Title */}
       <div className="gallery-title" data-aos="fade-up">
         <h1>Our Gallery</h1>
         <p style={{ fontSize: "1.1rem", color: "#777" }}>
@@ -102,7 +99,7 @@ const Gallery = () => {
         </p>
       </div>
 
-      {/* Gallery Grid */}
+    
       <div className="gallery-grid">
         {images.map((img, index) => (
           <div
@@ -117,9 +114,7 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* <Footer /> */}
-
-      {/* Styles */}
+     
       <style>
         {`
           .breadcrumb-section {
