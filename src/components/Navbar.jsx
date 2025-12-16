@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Loader Overlay */}
+  
       {loading && (
         <div
           style={{
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Navbar */}
+ 
       <header>
         <div className="navbar-container">
           <div className="nav-right">
@@ -94,7 +94,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Links (hidden in mobile with CSS) */}
           <nav className="nav-links">
             {links.map((link) => (
               <div key={link.name}>
@@ -128,7 +127,7 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+
       <div
         className={`mobile-menu-overlay ${open ? "open" : ""}`}
         onClick={() => setOpen(false)}
