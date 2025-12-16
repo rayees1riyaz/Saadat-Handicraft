@@ -3,7 +3,7 @@ import { Play, Pause } from "lucide-react";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [visible, setVisible] = useState(false); // Track if in viewport
+  const [visible, setVisible] = useState(false); 
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -21,18 +21,17 @@ const VideoSection = () => {
     setIsPlaying(false);
   };
 
-  // Intersection Observer to detect when section scrolls into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setVisible(true);
-            observer.unobserve(entry.target); // animate only once
+            observer.unobserve(entry.target); 
           }
         });
       },
-      { threshold: 0.3 } // 30% visible triggers animation
+      { threshold: 0.3 } 
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -75,7 +74,7 @@ const VideoSection = () => {
         onEnded={handleEnded}
       />
 
-      {/* Bottom-left Play/Pause Button */}
+
       <button
         onClick={togglePlay}
         style={{
