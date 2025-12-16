@@ -1,4 +1,4 @@
-// src/pages/AboutUs.jsx
+
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -36,7 +36,6 @@ const AboutUs = () => {
     <div style={{ fontFamily: "Georgia, serif", color: "#333" }}>
       <Navbar />
 
-      {/* Breadcrumb - always rendered, CSS will show only on mobile */}
       <section className="breadcrumb-section" data-aos="fade-down">
         <div
           style={{
@@ -56,7 +55,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* About + Mission Section */}
+  
       <section
         className="about-mission-section"
         style={{
@@ -120,7 +119,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Carousel + About Us Section */}
       <section
         className="carousel-about-section"
         style={{
@@ -132,7 +130,7 @@ const AboutUs = () => {
           alignItems: "flex-start",
         }}
       >
-        {/* Carousel */}
+        
         <div style={{ flex: "1", minWidth: "300px" }} data-aos="fade-right">
           <Slider {...settings}>
             {carouselItems.map((item, index) => (
@@ -154,7 +152,7 @@ const AboutUs = () => {
           </Slider>
         </div>
 
-        {/* About Us Text */}
+       
         <div
           className="about-text"
           style={{
@@ -185,9 +183,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* <Footer /> */}
 
-      {/* Styles */}
       <style>
         {`
           /* Breadcrumb hidden by default, show only on mobile */
