@@ -1,4 +1,4 @@
-// src/components/Collections.jsx
+
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -52,7 +52,7 @@ const Collections = () => {
     }, 1000);
   };
 
-  // ✅ Initialize AOS
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
