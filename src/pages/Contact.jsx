@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <>
-      {/* Breadcrumb */}
+      
       <section className="breadcrumb-section" data-aos="fade-down">
         <div
           style={{
@@ -62,7 +62,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Main Container */}
+ 
       <div className="contact-container">
         {/* Google Maps */}
         <section
@@ -98,7 +98,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Cards */}
+        
         <section
           data-aos="fade-up"
           style={{
@@ -134,7 +134,7 @@ const Contact = () => {
           ))}
         </section>
 
-        {/* Contact Form */}
+  
         <section
           data-aos="fade-up"
           style={{
@@ -203,7 +203,6 @@ const Contact = () => {
             </button>
           </form>
 
-          {/* ✅ Success message */}
           {successMsg && (
             <p
               style={{
@@ -220,7 +219,7 @@ const Contact = () => {
         </section>
       </div>
 
-      {/* Styles */}
+
       <style>
         {`
           .breadcrumb-section {
