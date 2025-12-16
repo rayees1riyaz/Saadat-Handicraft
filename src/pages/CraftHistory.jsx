@@ -68,7 +68,7 @@ const CraftHistory = () => {
         </div>
       </section>
 
-      {/* Craft Sections */}
+   
       <div className="craft-section-container">
         {craftSections.map((section, index) => (
           <div
@@ -82,18 +82,17 @@ const CraftHistory = () => {
             </div>
             <div className="craft-content">
               <h3>{section.title}</h3>
-              {/* ✅ clean up extra spaces/newlines */}
+          
               <p>{section.desc.replace(/\s+/g, " ").trim()}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* <Footer /> */}
-
+  
       <style>
         {`
-        /* Craft Sections */
+    
         .craft-section-container {
           max-width: 1150px;
           margin: 180px auto 100px auto;
